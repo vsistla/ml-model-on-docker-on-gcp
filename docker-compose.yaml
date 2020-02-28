@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  web:
+    build: web/
+    ports:
+      - 8000:8000
+    volumes:
+      - ./web:/opt/web/
+    tty: true
+
+  nlp:
+    build: nlp/
+    volumes:
+        - ./nlp:/opt/nlp/
+    tty: true
